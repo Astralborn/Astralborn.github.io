@@ -1,6 +1,3 @@
-# VS Code settings
-.vscode/
-
 # JetBrains IDEs (PyCharm, WebStorm, etc.)
 .idea/
 *.iml
