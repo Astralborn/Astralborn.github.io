@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 const target = document.querySelector(href);
                 if (target) {
-                    const offset = 80;
+                    const offset = 20; // scroll offset
                     const targetPosition = target.offsetTop - offset;
                     window.scrollTo({
                         top: targetPosition,
