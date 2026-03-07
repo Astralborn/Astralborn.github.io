@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="src/css/animations.css">
 </head>
 <body>
-    <!-- Terminal Boot Screen -->
-    <div id="bootScreen" class="boot-screen">
-        <div class="boot-content">
-            <div class="boot-header">
+<!-- Terminal Boot Screen -->
+<div id="bootScreen" class="boot-screen">
+    <div class="boot-content">
+        <div class="boot-header">
                 <pre class="ascii-art">
 
             _             _ _                      
@@ -24,53 +24,47 @@
 
 
                 </pre>
-            </div>
-            <div class="boot-terminal">
-                <p><span class="boot-prompt">[SYSTEM]</span> <span class="boot-text">Initializing test environment...</span></p>
-                <p><span class="boot-prompt">[PYTEST]</span> <span class="boot-text">Loading test frameworks</span> <span class="boot-dots"></span></p>
-                <p><span class="boot-prompt">[CI/CD]</span> <span class="boot-text">Jenkins pipeline connected</span> <span class="boot-status boot-ok">[OK]</span></p>
-                <p><span class="boot-prompt">[EMBEDDED]</span> <span class="boot-text">Mounting testbed hardware</span> <span class="boot-status boot-ok">[OK]</span></p>
-                <p><span class="boot-prompt">[EXEC]</span> <span class="boot-text">Running regression suite</span> <span class="boot-dots"></span></p>
-                <p><span class="boot-prompt">[PASS]</span> <span class="boot-text">All critical paths verified</span> <span class="boot-status boot-ok">[OK]</span></p>
-                <p><span class="boot-prompt">[DONE]</span> <span class="boot-text">System ready — defect escape rate: 0%</span> <span class="boot-status boot-ready">[READY]</span></p>
-            </div>
-            <div class="boot-progress">
-                <div class="boot-progress-bar"></div>
-            </div>
-            <p class="boot-footer">Press any key to continue... <span class="boot-sign">— astralborn</span></p>
+        </div>
+        <div class="boot-terminal">
+            <p><span class="boot-prompt">[SYSTEM]</span> <span class="boot-text">Initializing test environment...</span></p>
+            <p><span class="boot-prompt">[PYTEST]</span> <span class="boot-text">Loading test frameworks</span> <span class="boot-dots"></span></p>
+            <p><span class="boot-prompt">[CI/CD]</span> <span class="boot-text">Jenkins pipeline connected</span> <span class="boot-status boot-ok">[OK]</span></p>
+            <p><span class="boot-prompt">[EMBEDDED]</span> <span class="boot-text">Mounting testbed hardware</span> <span class="boot-status boot-ok">[OK]</span></p>
+            <p><span class="boot-prompt">[EXEC]</span> <span class="boot-text">Running regression suite</span> <span class="boot-dots"></span></p>
+            <p><span class="boot-prompt">[PASS]</span> <span class="boot-text">All critical paths verified</span> <span class="boot-status boot-ok">[OK]</span></p>
+            <p><span class="boot-prompt">[DONE]</span> <span class="boot-text">System ready — defect escape rate: 0%</span> <span class="boot-status boot-ready">[READY]</span></p>
+        </div>
+        <div class="boot-progress">
+            <div class="boot-progress-bar"></div>
+        </div>
+        <p class="boot-footer">Press any key to continue... <span class="boot-sign">— astralborn</span></p>
+    </div>
+</div>
+
+<nav>
+    <div class="nav-content">
+        <div class="logo">&gt;>_ ./blame-the-devs.sh --politely <span class="logo-sign"></span></div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="#home" onclick="closeMenu()">Home</a>
+            <a href="#about" onclick="closeMenu()">About</a>
+            <a href="#skills" onclick="closeMenu()">Skills</a>
+            <a href="#projects" onclick="closeMenu()">Projects</a>
+            <a href="#contact" onclick="closeMenu()">Contact</a>
         </div>
     </div>
+</nav>
 
-    <nav>
-        <div class="nav-content">
-            <div class="logo">&gt;>_ ./blame-the-devs.sh --politely <span class="logo-sign"></span></div>
-            <div class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="nav-links" id="navLinks">
-                <a href="#home" onclick="closeMenu()">Home</a>
-                <a href="#about" onclick="closeMenu()">About</a>
-                <a href="#skills" onclick="closeMenu()">Skills</a>
-                <!--
-                <a href="#experience" onclick="closeMenu()">Experience</a>
-                <a href="#education" onclick="closeMenu()">Education</a>
-                <a href="#certifications" onclick="closeMenu()">Certifications</a>
-                -->
-                <a href="#projects" onclick="closeMenu()">Projects</a>
-                <!-- <a href="#blog" onclick="closeMenu()">Blog</a>-->
-                <a href="#contact" onclick="closeMenu()">Contact</a>
-            </div>
-        </div>
-    </nav>
+<section class="hero" id="home">
+    <div class="hero-content fade-in">
+        <div class="tag">// qa automation engineer</div>
+        <p class="subtitle">Automation author. Manual work arsonist.</p>
 
-    <section class="hero" id="home">
-        <div class="hero-content fade-in">
-            <div class="tag">// qa automation engineer</div>
-            <p class="subtitle">Automation author. Manual work arsonist.</p>
-
-            <div style="
+        <div style="
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
@@ -79,8 +73,8 @@
             max-width: 900px;
             height: 380px;
         ">
-                <!-- PHOTO LEFT -->
-                <img src="src/assets/images/photo.png" alt="astralborn" style="
+            <!-- PHOTO LEFT -->
+            <img src="src/assets/images/photo.png" alt="astralborn" style="
                 width: 100%;
                 height: 90%;
                 object-fit: cover;
@@ -90,97 +84,97 @@
                 box-shadow: 0 0 40px rgba(0, 255, 140, 0.25);
             "/>
 
-                <!-- TERMINAL RIGHT -->
-                <div class="terminal-window" style="height: 90%; margin: 0;">
-                    <div class="terminal-header">
-                        <div class="terminal-dot dot-red"></div>
-                        <div class="terminal-dot dot-yellow"></div>
-                        <div class="terminal-dot dot-green"></div>
+            <!-- TERMINAL RIGHT -->
+            <div class="terminal-window" style="height: 90%; margin: 0;">
+                <div class="terminal-header">
+                    <div class="terminal-dot dot-red"></div>
+                    <div class="terminal-dot dot-yellow"></div>
+                    <div class="terminal-dot dot-green"></div>
+                </div>
+                <div class="terminal-text">
+                    <p><span class="prompt">$</span> <span class="command">./get-profile.sh</span></p>
+                    <p class="output">QA Automation Engineer with expertise in:</p>
+                    <p class="output"><span class="prompt">&gt;</span> Test Automation & Frameworks</p>
+                    <p class="output"><span class="prompt">&gt;</span> Embedded Systems & CI/CD</p>
+                    <p class="output"><span class="prompt">&gt;</span> Python · Pytest · Playwright</p>
+                    <br>
+                    <p><span class="prompt">$</span> <span class="command">cat github-link.txt</span></p>
+                    <p class="output">GitHub: <a href="https://github.com/astralborn" target="_blank" class="link">github.com/astralborn</a></p>
+                    <br>
+                    <p><span class="prompt">$</span> <span class="command">./navigate.sh</span></p>
+                    <p class="output">Select destination:</p>
+                    <a href="#projects" style="
+                        display: block;
+                        color: #00FF8C;
+                        text-decoration: none;
+                        font-family: 'Courier New', monospace;
+                        padding: 0.3rem 0.5rem;
+                        border: 1px solid rgba(0, 255, 140, 0.3);
+                        border-radius: 4px;
+                        margin: 0.3rem 0;
+                        transition: all 0.2s;
+                    " onmouseover="this.style.background='rgba(0,255,140,0.1)'; this.style.borderColor='#00FF8C';"
+                       onmouseout="this.style.background='transparent'; this.style.borderColor='rgba(0,255,140,0.3)';">
+                        [1] cd projects
+                    </a>
+                    <a href="#contact" style="
+                        display: block;
+                        color: #00FF8C;
+                        text-decoration: none;
+                        font-family: 'Courier New', monospace;
+                        padding: 0.3rem 0.5rem;
+                        border: 1px solid rgba(0, 255, 140, 0.3);
+                        border-radius: 4px;
+                        margin: 0.3rem 0;
+                        transition: all 0.2s;
+                    " onmouseover="this.style.background='rgba(0,255,140,0.1)'; this.style.borderColor='#00FF8C';"
+                       onmouseout="this.style.background='transparent'; this.style.borderColor='rgba(0,255,140,0.3)';">
+                        [2] ./contact.sh
+                    </a>
+                    <p><span class="prompt">&gt;</span> <span style="animation: blink 1s infinite;">█</span></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+        <div class="about-content fade-in">
+            <div class="about-text">
+                <p class="about-intro">
+                    Hi! I'm <span class="highlight">astralborn</span>, a QA Automation
+                    Engineer based in Prague. I build Python test frameworks, own CI/CD
+                    pipelines, and push coverage across the board — from embedded
+                    systems to web UI regression. Good enough to ship. Hungry enough to improve.
+                </p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Years of Experience</div>
                     </div>
-                    <div class="terminal-text">
-                        <p><span class="prompt">$</span> <span class="command">./get-profile.sh</span></p>
-                        <p class="output">QA Automation Engineer with expertise in:</p>
-                        <p class="output"><span class="prompt">&gt;</span> Test Automation & Frameworks</p>
-                        <p class="output"><span class="prompt">&gt;</span> Embedded Systems & CI/CD</p>
-                        <p class="output"><span class="prompt">&gt;</span> Python · Pytest · Playwright</p>
-                        <br>
-                        <p><span class="prompt">$</span> <span class="command">cat github-link.txt</span></p>
-                        <p class="output">GitHub: <a href="https://github.com/astralborn" target="_blank" class="link">github.com/astralborn</a></p>
-                        <br>
-                        <p><span class="prompt">$</span> <span class="command">./navigate.sh</span></p>
-                        <p class="output">Select destination:</p>
-                        <a href="#projects" style="
-                        display: block;
-                        color: #00FF8C;
-                        text-decoration: none;
-                        font-family: 'Courier New', monospace;
-                        padding: 0.3rem 0.5rem;
-                        border: 1px solid rgba(0, 255, 140, 0.3);
-                        border-radius: 4px;
-                        margin: 0.3rem 0;
-                        transition: all 0.2s;
-                    " onmouseover="this.style.background='rgba(0,255,140,0.1)'; this.style.borderColor='#00FF8C';"
-                           onmouseout="this.style.background='transparent'; this.style.borderColor='rgba(0,255,140,0.3)';">
-                            [1] cd projects
-                        </a>
-                        <a href="#contact" style="
-                        display: block;
-                        color: #00FF8C;
-                        text-decoration: none;
-                        font-family: 'Courier New', monospace;
-                        padding: 0.3rem 0.5rem;
-                        border: 1px solid rgba(0, 255, 140, 0.3);
-                        border-radius: 4px;
-                        margin: 0.3rem 0;
-                        transition: all 0.2s;
-                    " onmouseover="this.style.background='rgba(0,255,140,0.1)'; this.style.borderColor='#00FF8C';"
-                           onmouseout="this.style.background='transparent'; this.style.borderColor='rgba(0,255,140,0.3)';">
-                            [2] ./contact.sh
-                        </a>
-                        <p><span class="prompt">&gt;</span> <span style="animation: blink 1s infinite;">█</span></p>
+                    <div class="stat-item">
+                        <div class="stat-number">40+</div>
+                        <div class="stat-label">Scripts & Tools Built</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Tests Automated</div>
                     </div>
                 </div>
             </div>
 
-        </div>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-container">
-            <div class="about-content fade-in">
-                <div class="about-text">
-                    <p class="about-intro">
-                        Hi! I'm <span class="highlight">astralborn</span>, a QA Automation
-                        Engineer based in Prague. I build Python test frameworks, own CI/CD
-                        pipelines, and push coverage across the board — from embedded
-                        systems to web UI regression. Good enough to ship. Hungry enough to improve.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">3+</div>
-                            <div class="stat-label">Years of Experience</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">40+</div>
-                            <div class="stat-label">Scripts & Tools Built</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">∞</div>
-                            <div class="stat-label">Tests Automated</div>
-                        </div>
+            <div class="about-image">
+                <div class="code-window">
+                    <div class="code-header">
+                        <div class="code-dot dot-red"></div>
+                        <div class="code-dot dot-yellow"></div>
+                        <div class="code-dot dot-green"></div>
+                        <span class="code-title">about.py</span>
                     </div>
-                </div>
-
-                <div class="about-image">
-                    <div class="code-window">
-                        <div class="code-header">
-                            <div class="code-dot dot-red"></div>
-                            <div class="code-dot dot-yellow"></div>
-                            <div class="code-dot dot-green"></div>
-                            <span class="code-title">about.py</span>
-                        </div>
-                        <div class="code-content">
+                    <div class="code-content">
 <pre><code><span class="code-keyword">class</span> <span class="code-variable">Engineer</span>:
     <span class="code-keyword">def</span> <span class="code-variable">__init__</span>(<span class="code-property">self</span>):
         <span class="code-property">self</span>.name               = <span class="code-string">"Stanislav N."</span>
@@ -194,433 +188,195 @@
 
     <span class="code-keyword">@property</span>
     <span class="code-keyword">def</span> <span class="code-variable">fun_fact</span>(<span class="code-property">self</span>):
-        <span class="code-keyword">return</span> <span class="code-string">"I don't find bugs. bugs find me. we have a deal."</span>
+        <span class="code-keyword">return</span> <span class="code-string">"I don't find bugs. Bugs find me. We have a deal."</span>
 
-    <span class="code-keyword">def</span> <span class="code-variable">automate</span>(<span class="code-property">self</span>, task):
+    <span class="code-keyword">@staticmethod</span>
+    <span class="code-keyword">def</span> <span class="code-variable">automate</span>(task: str) -> str:
         <span class="code-keyword">return</span> task.replace(<span class="code-string">"manual"</span>, <span class="code-string">"automated"</span>)  <span class="code-comment"># works most of the time</span>
 </code></pre>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-category fade-in">
-                <h3>Frontend Development</h3>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>HTML/CSS</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 0%" data-width="90%"></div>
-                    </div>
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-category fade-in">
+            <h3>Frontend Development</h3>
+            <div class="skill-item">
+                <div class="skill-name">
+                    <span>HTML/CSS</span>
+                    <span>90%</span>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>JavaScript</span>
-                        <span>85%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 0%" data-width="85%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>React</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 0%" data-width="80%"></div>
-                    </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 0%" data-width="90%"></div>
                 </div>
             </div>
-
-            <div class="skill-category fade-in" style="animation-delay: 0.1s;">
-                <h3>Backend Development</h3>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Node.js</span>
-                        <span>75%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 0%" data-width="75%"></div>
-                    </div>
+            <div class="skill-item">
+                <div class="skill-name">
+                    <span>JavaScript</span>
+                    <span>85%</span>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Python</span>
-                        <span>70%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 0%" data-width="70%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Database</span>
-                        <span>75%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 0%" data-width="75%"></div>
-                    </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 0%" data-width="85%"></div>
                 </div>
             </div>
-
-            <div class="skill-category fade-in" style="animation-delay: 0.2s;">
-                <h3>Design & Tools</h3>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>UI/UX Design</span>
-                        <span>85%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 0%" data-width="85%"></div>
-                    </div>
+            <div class="skill-item">
+                <div class="skill-name">
+                    <span>React</span>
+                    <span>80%</span>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Git/GitHub</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 0%" data-width="90%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Responsive Design</span>
-                        <span>95%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 0%" data-width="95%"></div>
-                    </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 0%" data-width="80%"></div>
                 </div>
             </div>
         </div>
-    </section>
 
-<!--    <section id="experience">-->
-<!--        <h2>Experience</h2>-->
-<!--        <div class="timeline">-->
-<!--            <div class="timeline-item fade-in">-->
-<!--                <div class="timeline-dot"></div>-->
-<!--                <div class="timeline-content">-->
-<!--                    <h3>Full Stack Developer</h3>-->
-<!--                    <div class="timeline-date">2024 - Present</div>-->
-<!--                    <p class="timeline-description">-->
-<!--                        Developing modern web applications with cutting-edge technologies. -->
-<!--                        Building responsive and interactive user interfaces with focus on performance and user experience.-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="timeline-item fade-in" style="animation-delay: 0.1s;">-->
-<!--                <div class="timeline-dot"></div>-->
-<!--                <div class="timeline-content">-->
-<!--                    <h3>Frontend Developer</h3>-->
-<!--                    <div class="timeline-date">2023 - 2024</div>-->
-<!--                    <p class="timeline-description">-->
-<!--                            Specialized in creating immersive web experiences with advanced CSS animations and JavaScript interactions.-->
-<!--                            Developed multiple creative projects showcasing interactive animations and experimental UI.-->
-<!--                        </p>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="timeline-item fade-in" style="animation-delay: 0.2s;">-->
-<!--                <div class="timeline-dot"></div>-->
-<!--                <div class="timeline-content">-->
-<!--                    <h3>Web Designer</h3>-->
-<!--                    <div class="timeline-date">2022 - 2023</div>-->
-<!--                    <p class="timeline-description">-->
-<!--                        Designed and prototyped user interfaces for various web applications.-->
-<!--                        Focused on modern design trends and user-centered design principles.-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
-
-<!--    <section id="education">-->
-<!--        <h2>Education</h2>-->
-<!--        <div class="timeline">-->
-<!--            <div class="timeline-item fade-in">-->
-<!--                <div class="timeline-dot"></div>-->
-<!--                <div class="timeline-content">-->
-<!--                    <h3>Cyber Security</h3>-->
-<!--                    <div class="timeline-date">2024 - Present</div>-->
-<!--                    <p class="timeline-description">-->
-<!--                        Studied cybersecurity principles, network security, ethical hacking, and digital forensics.-->
-<!--                        Specialized in secure web development and protecting applications against cyber threats.-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="timeline-item fade-in" style="animation-delay: 0.1s;">-->
-<!--                <div class="timeline-dot"></div>-->
-<!--                <div class="timeline-content">-->
-<!--                    <h3>Self-Learning & Online Courses</h3>-->
-<!--                    <div class="timeline-date">2019 - Present</div>-->
-<!--                    <p class="timeline-description">-->
-<!--                        Continuously learning new technologies through online platforms.-->
-<!--                        Completed courses in React, Node.js, UI/UX Design, and advanced JavaScript.-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
-
-<!--    <section id="certifications">-->
-<!--        <h2>Certifications & Awards</h2>-->
-<!--        <div class="certifications-grid">-->
-<!--            <div class="cert-card fade-in">-->
-<!--                <div class="cert-icon">🏆</div>-->
-<!--                <div class="cert-badge">-->
-<!--                    <div class="cert-badge-inner">-->
-<!--                        <div class="cert-title">Web Development</div>-->
-<!--                        <div class="cert-issuer">FreeCodeCamp</div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <h3>Responsive Web Design</h3>-->
-<!--                <p class="cert-description">-->
-<!--                    Completed comprehensive curriculum covering HTML5, CSS3, Flexbox, Grid, and responsive design principles.-->
-<!--                </p>-->
-<!--                <div class="cert-footer">-->
-<!--                    <span class="cert-date">2024</span>-->
-<!--                    <a href="#" class="cert-link">Verify &rarr;</a>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="cert-card fade-in" style="animation-delay: 0.1s;">-->
-<!--                <div class="cert-icon">🔐</div>-->
-<!--                <div class="cert-badge">-->
-<!--                    <div class="cert-badge-inner">-->
-<!--                        <div class="cert-title">Cybersecurity</div>-->
-<!--                        <div class="cert-issuer">Coursera</div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <h3>Ethical Hacking Fundamentals</h3>-->
-<!--                <p class="cert-description">-->
-<!--                    Learned penetration testing, vulnerability assessment, and security best practices for web applications.-->
-<!--                </p>-->
-<!--                <div class="cert-footer">-->
-<!--                    <span class="cert-date">2024</span>-->
-<!--                    <a href="#" class="cert-link">Verify &rarr;</a>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="cert-card fade-in" style="animation-delay: 0.2s;">-->
-<!--                <div class="cert-icon">⚛️</div>-->
-<!--                <div class="cert-badge">-->
-<!--                    <div class="cert-badge-inner">-->
-<!--                        <div class="cert-title">JavaScript</div>-->
-<!--                        <div class="cert-issuer">Udemy</div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <h3>Advanced React & Redux</h3>-->
-<!--                <p class="cert-description">-->
-<!--                    Mastered modern React patterns, state management, hooks, and building scalable applications.-->
-<!--                </p>-->
-<!--                <div class="cert-footer">-->
-<!--                    <span class="cert-date">2023</span>-->
-<!--                    <a href="#" class="cert-link">Verify &rarr;</a>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="cert-card fade-in" style="animation-delay: 0.3s;">-->
-<!--                <div class="cert-icon">🎨</div>-->
-<!--                <div class="cert-badge">-->
-<!--                    <div class="cert-badge-inner">-->
-<!--                        <div class="cert-title">Design</div>-->
-<!--                        <div class="cert-issuer">Google</div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <h3>UX Design Professional</h3>-->
-<!--                <p class="cert-description">-->
-<!--                    Comprehensive training in user research, wireframing, prototyping, and usability testing methodologies.-->
-<!--                </p>-->
-<!--                <div class="cert-footer">-->
-<!--                    <span class="cert-date">2023</span>-->
-<!--                    <a href="#" class="cert-link">Verify &rarr;</a>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="cert-card fade-in" style="animation-delay: 0.4s;">-->
-<!--                <div class="cert-icon">🌐</div>-->
-<!--                <div class="cert-badge">-->
-<!--                    <div class="cert-badge-inner">-->
-<!--                        <div class="cert-title">Backend</div>-->
-<!--                        <div class="cert-issuer">Node.js Foundation</div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <h3>Node.js Application Developer</h3>-->
-<!--                <p class="cert-description">-->
-<!--                    Professional certification in building scalable server-side applications with Node.js and Express.-->
-<!--                </p>-->
-<!--                <div class="cert-footer">-->
-<!--                    <span class="cert-date">2023</span>-->
-<!--                    <a href="#" class="cert-link">Verify &rarr;</a>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="cert-card fade-in" style="animation-delay: 0.5s;">-->
-<!--                <div class="cert-icon">⭐</div>-->
-<!--                <div class="cert-badge award-badge">-->
-<!--                    <div class="cert-badge-inner">-->
-<!--                        <div class="cert-title">Award</div>-->
-<!--                        <div class="cert-issuer">Hackathon 2024</div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <h3>Best UI/UX Design Award</h3>-->
-<!--                <p class="cert-description">-->
-<!--                    First place winner for innovative interface design and user experience at the Regional Web Dev Hackathon.-->
-<!--                </p>-->
-<!--                <div class="cert-footer">-->
-<!--                    <span class="cert-date">2024</span>-->
-<!--                    <span class="cert-badge-text">🥇 Winner</span>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
-
-    <section id="projects">
-        <h2>Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card fade-in">
-                <h3>� Portfolio Site</h3>
-                <p>Modern portfolio with cyber-inspired design, terminal aesthetics, and smooth animations. <span class="project-sign">(by serozr)</span></p>
-                <a href="#" class="project-link">View More &rarr;</a>
+        <div class="skill-category fade-in" style="animation-delay: 0.1s;">
+            <h3>Backend Development</h3>
+            <div class="skill-item">
+                <div class="skill-name">
+                    <span>Node.js</span>
+                    <span>75%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 0%" data-width="75%"></div>
+                </div>
             </div>
-            
-            <div class="project-card fade-in" style="animation-delay: 0.1s;">
-                <h3>💻 Web Applications</h3>
-                <p>Full-stack web applications with modern frameworks, responsive design, and optimized performance.</p>
-                <a href="#" class="project-link">Explore &rarr;</a>
+            <div class="skill-item">
+                <div class="skill-name">
+                    <span>Python</span>
+                    <span>70%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 0%" data-width="70%"></div>
+                </div>
             </div>
-            
-            <div class="project-card fade-in" style="animation-delay: 0.2s;">
-                <h3>🎨 UI/UX Projects</h3>
-                <p>Creative design projects focusing on user experience and modern interface design principles.</p>
-                <a href="#contact" class="project-link">Get Notified &rarr;</a>
+            <div class="skill-item">
+                <div class="skill-name">
+                    <span>Database</span>
+                    <span>75%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 0%" data-width="75%"></div>
+                </div>
             </div>
         </div>
-    </section>
 
-<!--    <section id="blog">-->
-<!--        <h2>Latest Blog Posts</h2>-->
-<!--        <div class="blog-grid">-->
-<!--            <div class="blog-card fade-in">-->
-<!--                <div class="blog-header">-->
-<!--                    <div class="blog-date">October 15, 2025</div>-->
-<!--                </div>-->
-<!--                <div class="blog-body">-->
-<!--                    <h3>Building Immersive Web Experiences <span class="post-sign">— serozr</span></h3>-->
-<!--                    <div class="blog-tags">-->
-<!--                        <span class="blog-tag">JavaScript</span>-->
-<!--                        <span class="blog-tag">CSS Animations</span>-->
-<!--                        <span class="blog-tag">WebGL</span>-->
-<!--                    </div>-->
-<!--                    <p>Exploring advanced techniques for creating psychedelic and interactive web experiences using vanilla JavaScript and CSS...</p>-->
-<!--                    <a href="#" class="project-link">Read More &rarr;</a>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="blog-card fade-in" style="animation-delay: 0.1s;">-->
-<!--                <div class="blog-header">-->
-<!--                    <div class="blog-date">October 10, 2025</div>-->
-<!--                </div>-->
-<!--                <div class="blog-body">-->
-<!--                    <h3>Modern Web Design Trends</h3>-->
-<!--                    <div class="blog-tags">-->
-<!--                        <span class="blog-tag">UI/UX</span>-->
-<!--                        <span class="blog-tag">Design</span>-->
-<!--                        <span class="blog-tag">Trends</span>-->
-<!--                    </div>-->
-<!--                    <p>A deep dive into cyberpunk aesthetics, glassmorphism, and terminal-inspired designs that are shaping the future of web...</p>-->
-<!--                    <a href="#" class="project-link">Read More &rarr;</a>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="blog-card fade-in" style="animation-delay: 0.2s;">-->
-<!--                <div class="blog-header">-->
-<!--                    <div class="blog-date">October 5, 2025</div>-->
-<!--                </div>-->
-<!--                <div class="blog-body">-->
-<!--                    <h3>Performance Optimization Tips</h3>-->
-<!--                    <div class="blog-tags">-->
-<!--                        <span class="blog-tag">Performance</span>-->
-<!--                        <span class="blog-tag">Optimization</span>-->
-<!--                        <span class="blog-tag">Best Practices</span>-->
-<!--                    </div>-->
-<!--                    <p>Learn how to optimize heavy animations and interactive elements without sacrificing visual appeal and user experience...</p>-->
-<!--                    <a href="#" class="project-link">Read More &rarr;</a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
-
-    <section id="contact">
-        <h2>Get In Touch</h2>
-        <div class="contact-container">
-            <div class="contact-grid">
-                <div class="contact-item fade-in">
-                    <div class="contact-icon">📧</div>
-                    <h3>Email</h3>
-                    <a href="mailto:serozr@example.com">serozr@example.com</a>
-                    <div class="contact-note">preferred contact: <strong>serozr</strong></div>
+        <div class="skill-category fade-in" style="animation-delay: 0.2s;">
+            <h3>Design & Tools</h3>
+            <div class="skill-item">
+                <div class="skill-name">
+                    <span>UI/UX Design</span>
+                    <span>85%</span>
                 </div>
-
-                <div class="contact-item fade-in" style="animation-delay: 0.1s;">
-                    <div class="contact-icon">💼</div>
-                    <h3>GitHub</h3>
-                    <a href="https://github.com/serozr" target="_blank">github.com/serozr</a>
-                </div>
-
-                <div class="contact-item fade-in" style="animation-delay: 0.2s;">
-                    <div class="contact-icon">🔗</div>
-                    <h3>LinkedIn</h3>
-                    <a href="https://linkedin.com/in/serozr" target="_blank">linkedin.com/in/serozr</a>
-                </div>
-
-                <div class="contact-item fade-in" style="animation-delay: 0.3s;">
-                    <div class="contact-icon">🐦</div>
-                    <h3>Twitter</h3>
-                    <a href="https://twitter.com/serodxr" target="_blank">@serozr</a>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 0%" data-width="85%"></div>
                 </div>
             </div>
-
-            <div class="contact-form fade-in">
-                <form>
-                    <div class="form-group">
-                        <label>$ name --input</label>
-                        <input type="text" placeholder="serozr" required>
-                        <small class="field-sign">Signed by serozr</small>
-                    </div>
-                    <div class="form-group">
-                        <label>$ email --input</label>
-                        <input type="email" placeholder="serozr@example.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label>$ message --input</label>
-                        <textarea placeholder="Your message here..." required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
+            <div class="skill-item">
+                <div class="skill-name">
+                    <span>Git/GitHub</span>
+                    <span>90%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 0%" data-width="90%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-name">
+                    <span>Responsive Design</span>
+                    <span>95%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 0%" data-width="95%"></div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer>
+<section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="projects-grid">
+        <div class="project-card fade-in">
+            <h3>🖥️ Portfolio Site</h3>
+            <p>Modern portfolio with cyber-inspired design, terminal aesthetics, and smooth animations.</p>
+            <a href="#" class="project-link">View More &rarr;</a>
+        </div>
+
+        <div class="project-card fade-in" style="animation-delay: 0.1s;">
+            <h3>💻 Web Applications</h3>
+            <p>Full-stack web applications with modern frameworks, responsive design, and optimized performance.</p>
+            <a href="#" class="project-link">Explore &rarr;</a>
+        </div>
+
+        <div class="project-card fade-in" style="animation-delay: 0.2s;">
+            <h3>🎨 UI/UX Projects</h3>
+            <p>Creative design projects focusing on user experience and modern interface design principles.</p>
+            <a href="#contact" class="project-link">Get Notified &rarr;</a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Get In Touch</h2>
+    <div class="contact-container">
+        <div class="contact-grid">
+            <div class="contact-item fade-in">
+                <div class="contact-icon">📧</div>
+                <h3>Email</h3>
+                <a href="mailto:serozr@example.com">serozr@example.com</a>
+            </div>
+
+            <div class="contact-item fade-in" style="animation-delay: 0.1s;">
+                <div class="contact-icon">💼</div>
+                <h3>GitHub</h3>
+                <a href="https://github.com/astralborn" target="_blank">github.com/astralborn</a>
+            </div>
+
+            <div class="contact-item fade-in" style="animation-delay: 0.2s;">
+                <div class="contact-icon">🔗</div>
+                <h3>LinkedIn</h3>
+                <a href="https://linkedin.com/in/stas-nikolaievskyi" target="_blank">linkedin.com/in/stas-nikolaievskyi</a>
+            </div>
+
+            <div class="contact-item fade-in" style="animation-delay: 0.3s;">
+                <div class="contact-icon">🐦</div>
+                <h3>Twitter</h3>
+                <a href="https://twitter.com/serodxr" target="_blank">@serozr</a>
+            </div>
+        </div>
+
+        <div class="contact-form fade-in">
+            <form>
+                <div class="form-group">
+                    <label>$ name --input</label>
+                    <input type="text" placeholder="your name" required>
+                </div>
+                <div class="form-group">
+                    <label>$ email --input</label>
+                    <input type="email" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label>$ message --input</label>
+                    <textarea placeholder="Your message here..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
     <p>&copy; 2026 <span class="signature">astralborn</span>. All rights reserved.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Created with vanilla JS, vanilla ice cream, and a scoop of AI.</p>
-    </footer>
+    <p style="margin-top: 0.5rem; font-size: 0.9rem;">Created with vanilla JS, vanilla ice cream, and a scoop of AI.</p>
+</footer>
 
-
-    <script src="src/js/main.js"></script>
+<script src="src/js/main.js"></script>
 </body>
 </html>
 
