@@ -3,11 +3,9 @@
 **Terminal-inspired portfolio.** Cyberpunk. Zero dependencies.
 
 <br>
-
 <a href="https://astralborn.github.io">
   <img src="https://img.shields.io/badge/Live_Site-00FF8C?style=for-the-badge&logoColor=black" alt="Live site" />
 </a>
-
 <br>
 
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
