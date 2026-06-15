@@ -24,4 +24,14 @@ Desktop.ini
 # Log files
 *.log
 
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+*_venv/
+
 # End of file
