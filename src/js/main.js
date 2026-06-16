@@ -3,19 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    // --- Boot screen ---
-    const bootScreen = document.getElementById('bootScreen');
-
-    const skipBoot = () => {
-        bootScreen.classList.add('fade-out');
-        setTimeout(() => {
-            bootScreen.style.display = 'none';
-        }, 500);
-    };
-
-    setTimeout(skipBoot, 6000);
-    document.addEventListener('keydown', skipBoot, { once: true });
-    bootScreen.addEventListener('click', skipBoot, { once: true });
 
     // --- Active nav highlight on scroll ---
     const sections = document.querySelectorAll('section[id]');

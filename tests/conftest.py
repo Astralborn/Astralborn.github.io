@@ -29,7 +29,6 @@ LOCAL_FILE_URL = _INDEX.as_uri()
 def portfolio(page: Page) -> PortfolioPage:
     """
     Navigates to the live portfolio page, returns a ready-to-use PortfolioPage.
-    The boot screen is NOT dismissed — individual tests decide when/how to do that.
     """
     po = PortfolioPage(page)
     po.open()
@@ -40,7 +39,6 @@ def portfolio(page: Page) -> PortfolioPage:
 def portfolio_local(page: Page) -> PortfolioPage:
     """
     Opens index.html from the local filesystem — no network required.
-    Boot screen is not dismissed.
     """
     po = PortfolioPage(page)
     po.open_local(str(_INDEX))
@@ -50,20 +48,17 @@ def portfolio_local(page: Page) -> PortfolioPage:
 @pytest.fixture()
 def portfolio_ready(page: Page) -> PortfolioPage:
     """
-    Navigates to the live site AND dismisses the boot screen so tests
-    can interact with the main content immediately.
+    Navigates to the live site and returns a ready-to-use PortfolioPage.
     """
     po = PortfolioPage(page)
     po.open()
-    po.dismiss_boot_screen()
     return po
 
 
 @pytest.fixture()
 def portfolio_local_ready(page: Page) -> PortfolioPage:
-    """Local variant with boot screen already dismissed."""
+    """Local variant that opens directly into the main content."""
     po = PortfolioPage(page)
     po.open_local(str(_INDEX))
-    po.dismiss_boot_screen()
     return po
 

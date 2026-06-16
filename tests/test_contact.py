@@ -70,7 +70,6 @@ class TestContactSection:
         index = pathlib.Path(__file__).parent.parent / "index.html"
         po = PortfolioPage(page)
         po.open_local(str(index))
-        po.dismiss_boot_screen()
         po.scroll_to_section("contact")
 
         btn = po.contact.copy_button_for("stas.nikolaevski@gmail.com")

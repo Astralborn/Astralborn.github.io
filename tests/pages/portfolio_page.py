@@ -1,7 +1,6 @@
 """Top-level Page Object — full portfolio page."""
 from playwright.sync_api import Page, Locator, expect
 
-from tests.pages.boot_screen_page import BootScreen
 from tests.pages.navbar_page import NavBar
 from tests.pages.hero_section_page import HeroSection
 from tests.pages.about_section_page import AboutSection
@@ -20,13 +19,11 @@ class PortfolioPage:
     -----
     portfolio = PortfolioPage(page)
     portfolio.open()
-    portfolio.dismiss_boot_screen()
     portfolio.nav.click_nav_link("About")
     """
 
     def __init__(self, page: Page) -> None:
         self._page = page
-        self.boot_screen = BootScreen(page)
         self.nav = NavBar(page)
         self.hero = HeroSection(page)
         self.about = AboutSection(page)
@@ -44,10 +41,6 @@ class PortfolioPage:
         """Open a local HTML file, e.g. for offline testing."""
         self._page.goto(f"file:///{path}")
 
-    def dismiss_boot_screen(self) -> None:
-        """Click to skip the boot animation and wait for it to disappear."""
-        self.boot_screen.dismiss_by_click()
-        self.boot_screen.wait_until_gone()
 
     def scroll_to_section(self, section_id: str) -> None:
         self._page.evaluate(
