@@ -33,3 +33,16 @@
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
 }
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .fade-in,
+    .typing,
+    .cursor,
+    .lazy-section {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}

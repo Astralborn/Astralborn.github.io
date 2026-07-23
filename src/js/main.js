@@ -40,20 +40,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.copy-btn').forEach(btn => {
         btn.addEventListener('click', async () => {
             const text = btn.getAttribute('data-copy');
-            const confirm = btn.nextElementSibling;
             try {
                 await navigator.clipboard.writeText(text);
                 btn.textContent = '[✓]';
                 setTimeout(() => btn.textContent = '[copy]', 1500);
             } catch {
-                if (confirm) {
-                    confirm.textContent = '[SELECT & COPY]';
-                    confirm.style.opacity = '1';
-                    setTimeout(() => {
-                        confirm.style.opacity = '0';
-                        confirm.textContent = '[COPIED]';
-                    }, 2000);
-                }
+                btn.textContent = '[✗]';
+                setTimeout(() => btn.textContent = '[copy]', 1500);
             }
         });
     });
@@ -87,36 +80,19 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
-    // --- FIX: skillObserver moved inside DOMContentLoaded so .skill-category
-    //     elements are guaranteed to exist when querySelectorAll runs ---
-    const skillObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const progressBars = entry.target.querySelectorAll('.skill-progress');
-                progressBars.forEach(bar => {
-                    const width = bar.getAttribute('data-width');
-                    setTimeout(() => {
-                        bar.style.width = width;
-                    }, 100);
-                });
-                skillObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
+    // --- Nav menu toggle ---
+    const hamburger = document.getElementById('hamburger');
+    const navLinksEl = document.getElementById('navLinks');
 
-    document.querySelectorAll('.skill-category').forEach(category => {
-        skillObserver.observe(category);
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            navLinksEl.classList.toggle('active');
+        });
+    }
+
+    navLinksEl.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinksEl.classList.remove('active');
+        });
     });
 });
-
-
-// --- Nav menu toggle ---
-window.toggleMenu = function () {
-    const navLinks = document.getElementById('navLinks');
-    navLinks.classList.toggle('active');
-};
-
-window.closeMenu = function () {
-    const navLinks = document.getElementById('navLinks');
-    navLinks.classList.remove('active');
-};

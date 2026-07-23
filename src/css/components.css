@@ -16,10 +16,6 @@
     margin-bottom: 0.4rem;
 }
 
-.fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
-    will-change: opacity, transform;
-}
 
 .nav-links a {
     position: relative;
@@ -192,10 +188,6 @@
     min-width: 140px;
 }
 
-.skill-name-col--wide {
-    min-width: 170px;
-    white-space: nowrap;
-}
 
 .skill-bar-advanced   { color: #00FF8C; letter-spacing: 3px; }
 .skill-bar-proficient { color: #00cc88; letter-spacing: 3px; }
@@ -316,10 +308,6 @@
     }
 
     .skill-name-col {
-        min-width: 100px;
-    }
-
-    .skill-name-col--wide {
         min-width: 100px;
     }
 
