@@ -167,6 +167,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 4rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.skills-cols--bottom {
+    margin-top: 1.5rem;
 }
 
 .skill-cat-heading {
@@ -191,6 +197,7 @@
     white-space: nowrap;
 }
 
+.skill-bar-advanced   { color: #00FF8C; letter-spacing: 3px; }
 .skill-bar-proficient { color: #00cc88; letter-spacing: 3px; }
 .skill-bar-solid      { color: #00a86b; letter-spacing: 3px; }
 .skill-bar-basic      { color: #557a55; letter-spacing: 3px; }
@@ -200,6 +207,7 @@
     margin-left: 0.5rem;
 }
 
+.skill-label--advanced   { color: #00FF8C; }
 .skill-label--proficient { color: #00cc88; }
 .skill-label--solid      { color: #00a86b; }
 .skill-label--basic      { color: #557a55; }

@@ -122,7 +122,7 @@
     <span class="code-variable">role</span>: <span class="code-keyword">str</span> = <span class="code-string">"Test Automation Engineer"</span>
     <span class="code-variable">location</span>: <span class="code-keyword">str</span> = <span class="code-string">"Prague, CZ"</span>
     <span class="code-variable">experience</span>: <span class="code-keyword">str</span> = <span class="code-string">"4+ years"</span>
-    <span class="code-variable">stack</span>: <span class="code-keyword">list</span> = [<span class="code-string">"Python"</span>, <span class="code-string">"Pytest"</span>, <span class="code-string">"Playwright"</span>, <span class="code-string">"Jenkins"</span>]
+    <span class="code-variable">stack</span>: <span class="code-keyword">list</span> = [<span class="code-string">"Python"</span>, <span class="code-string">"Pytest"</span>, <span class="code-string">"Playwright"</span>, <span class="code-string">"GitLab CI"</span>]
     <span class="code-variable">domains</span>: <span class="code-keyword">list</span> = [<span class="code-string">"Embedded Systems"</span>, <span class="code-string">"CI/CD"</span>, <span class="code-string">"Web UI"</span>]
     <span class="code-variable">learning</span>: <span class="code-keyword">list</span> = [<span class="code-string">"Advanced Python & Pytest"</span>, <span class="code-string">"JavaScript"</span>, <span class="code-string">"DevOps"</span>]
     <span class="code-variable">manual_tests</span>: <span class="code-keyword">list</span> = <span class="code-variable">field</span>(<span class="code-property">default_factory</span>=list)    <span class="code-comment"># RIP</span>
@@ -146,29 +146,34 @@
         </div>
         <div class="terminal-text skills-terminal-text">
 
-            <p class="skills-heading"><span class="prompt">$</span><span class="command"> skills --list --verbose</span></p>
+            <p class="skills-heading"><span class="prompt">$</span><span class="command"> tree ~/skills</span></p>
 
             <div class="skills-cols">
 
-                <!-- LEFT: Automation -->
+                <!-- LEFT: Test Automation -->
                 <div>
-                    <p class="skill-cat-heading"># Automation</p>
+                    <p class="skill-cat-heading"># Test Automation</p>
                     <div class="skill-row"><span class="skill-name-col">Python</span><span class="skill-bar-proficient">████░</span><span class="skill-label skill-label--proficient">proficient</span></div>
                     <div class="skill-row"><span class="skill-name-col">Pytest</span><span class="skill-bar-proficient">████░</span><span class="skill-label skill-label--proficient">proficient</span></div>
                     <div class="skill-row"><span class="skill-name-col">Playwright</span><span class="skill-bar-solid">███░░</span><span class="skill-label skill-label--solid">solid</span></div>
                     <div class="skill-row"><span class="skill-name-col">JavaScript</span><span class="skill-bar-basic">██░░░</span><span class="skill-label skill-label--basic">basic</span></div>
                 </div>
 
-                <!-- RIGHT: Domain & Tools -->
+                <!-- RIGHT: Tools & Infrastructure -->
                 <div>
-                    <p class="skill-cat-heading"># Domain & Tools</p>
-                    <div class="skill-row"><span class="skill-name-col skill-name-col--wide">Packet analysis</span><span class="skill-bar-proficient">████░</span><span class="skill-label skill-label--proficient">proficient</span></div>
-                    <div class="skill-row"><span class="skill-name-col skill-name-col--wide">Jenkins</span><span class="skill-bar-solid">███░░</span><span class="skill-label skill-label--solid">solid</span></div>
-                    <div class="skill-row"><span class="skill-name-col skill-name-col--wide">Git</span><span class="skill-bar-solid">███░░</span><span class="skill-label skill-label--solid">solid</span></div>
-                    <div class="skill-row"><span class="skill-name-col skill-name-col--wide">Linux</span><span class="skill-bar-solid">███░░</span><span class="skill-label skill-label--solid">solid</span></div>
+                    <p class="skill-cat-heading"># Tools & Infrastructure</p>
+                    <div class="skill-row"><span class="skill-name-col">Wireshark</span><span class="skill-bar-proficient">████░</span><span class="skill-label skill-label--proficient">proficient</span></div>
+                    <div class="skill-row"><span class="skill-name-col">Networking</span><span class="skill-bar-solid">███░░</span><span class="skill-label skill-label--solid">solid</span></div>
+                    <div class="skill-row"><span class="skill-name-col">GitLab CI/CD</span><span class="skill-bar-solid">███░░</span><span class="skill-label skill-label--solid">solid</span></div>
+                    <div class="skill-row"><span class="skill-name-col">Linux</span><span class="skill-bar-solid">███░░</span><span class="skill-label skill-label--solid">solid</span></div>
                 </div>
 
             </div>
+
+            <br>
+            <p><span class="prompt">$</span><span class="command"> cat full-stack.txt</span></p>
+            <p><span class="prompt">&gt;</span> <span class="output">Full list available in CV →</span> <a href="src/assets/CV_astralborn.pdf" target="_blank" rel="noopener noreferrer" class="link contact-link">view CV</a></p>
+
         </div>
     </div>
 </section>
@@ -277,3 +282,5 @@
 </html>
 
 <!-- End of file -->
+
+

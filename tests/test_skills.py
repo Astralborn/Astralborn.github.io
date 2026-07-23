@@ -9,13 +9,19 @@ EXPECTED_SKILLS: list[str] = [
     "Pytest",
     "Playwright",
     "JavaScript",
+    "Network protocols",
     "Packet analysis",
-    "Jenkins",
-    "Git",
     "Linux",
+    "Git",
+    "Jenkins",
+    "Docker",
 ]
 
-EXPECTED_CATEGORIES: list[str] = ["# Automation", "# Domain & Tools"]
+EXPECTED_CATEGORIES: list[str] = [
+    "# Test Automation",
+    "# Embedded & Protocols",
+    "# Tools",
+]
 
 EXPECTED_LABELS: set[str] = {"proficient", "solid", "basic"}
 
@@ -25,10 +31,12 @@ SKILL_PROFICIENCY: dict[str, str] = {
     "Pytest": "proficient",
     "Playwright": "solid",
     "JavaScript": "basic",
-    "Packet analysis": "proficient",
-    "Jenkins": "solid",
-    "Git": "solid",
+    "Network protocols": "proficient",
+    "Packet analysis": "solid",
     "Linux": "solid",
+    "Git": "solid",
+    "Jenkins": "solid",
+    "Docker": "basic",
 }
 
 
@@ -45,13 +53,13 @@ class TestSkillsSection:
         portfolio_local_ready.scroll_to_section("skills")
         portfolio_local_ready.skills.expect_terminal_visible()
 
-    def test_eight_skill_rows_present(self, portfolio_local_ready: PortfolioPage) -> None:
-        """There must be exactly 8 skill rows — 4 Automation + 4 Domain & Tools."""
+    def test_ten_skill_rows_present(self, portfolio_local_ready: PortfolioPage) -> None:
+        """There must be exactly 10 skill rows — 4 + 3 + 3."""
         portfolio_local_ready.scroll_to_section("skills")
-        portfolio_local_ready.skills.expect_skill_row_count(8)
+        portfolio_local_ready.skills.expect_skill_row_count(10)
 
-    def test_two_category_headings(self, portfolio_local_ready: PortfolioPage) -> None:
-        """Skills must be grouped under exactly 2 category headings: '# Automation' and '# Domain & Tools'."""
+    def test_three_category_headings(self, portfolio_local_ready: PortfolioPage) -> None:
+        """Skills must be grouped under exactly 3 category headings."""
         portfolio_local_ready.scroll_to_section("skills")
         headings = portfolio_local_ready.skills.get_category_headings()
         assert headings == EXPECTED_CATEGORIES
