@@ -56,8 +56,7 @@ Open `index.html` directly in a browser — no server needed.
 Requires Python 3.12+ and [uv](https://docs.astral.sh/uv/):
 
 ```bash
-uv venv
-uv pip install -r requirements-test.txt
+uv sync --group test
 uv run playwright install --with-deps chromium
 uv run pytest
 ```

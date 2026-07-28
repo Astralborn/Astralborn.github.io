@@ -16,6 +16,7 @@ Personal portfolio website for a Test Automation Engineer. Static site with a te
 ```
 ├── index.html              # Single-page app entry point
 ├── 404.html                # Custom 404 page
+├── pyproject.toml          # Project config, test deps, pytest settings
 ├── src/
 │   ├── css/
 │   │   ├── main.css        # Base styles, layout, responsive
@@ -52,7 +53,7 @@ Personal portfolio website for a Test Automation Engineer. Static site with a te
 - `PortfolioPage` is the top-level facade that composes all section objects
 - Tests run against the live site by default; `portfolio_local` fixture runs against local `index.html`
 - Run tests: `uv run pytest --browser chromium`
-- Install deps: `uv venv && uv pip install -r requirements-test.txt && uv run playwright install --with-deps chromium`
+- Install deps: `uv sync --group test && uv run playwright install --with-deps chromium`
 
 ### CI/CD
 - Use `uv` (via `astral-sh/setup-uv@v3`) for Python dependency management in GitHub Actions
@@ -71,8 +72,7 @@ Personal portfolio website for a Test Automation Engineer. Static site with a te
 Open `index.html` directly in a browser — no server needed. For tests:
 
 ```bash
-uv venv
-uv pip install -r requirements-test.txt
+uv sync --group test
 uv run playwright install --with-deps chromium
 uv run pytest
 ```
