@@ -9,18 +9,15 @@ EXPECTED_SKILLS: list[str] = [
     "Pytest",
     "Playwright",
     "JavaScript",
-    "Network protocols",
-    "Packet analysis",
+    "Wireshark",
+    "Networking",
+    "GitLab CI/CD",
     "Linux",
-    "Git",
-    "Jenkins",
-    "Docker",
 ]
 
 EXPECTED_CATEGORIES: list[str] = [
     "# Test Automation",
-    "# Embedded & Protocols",
-    "# Tools",
+    "# Tools & Infrastructure",
 ]
 
 EXPECTED_LABELS: set[str] = {"proficient", "solid", "basic"}
@@ -31,12 +28,10 @@ SKILL_PROFICIENCY: dict[str, str] = {
     "Pytest": "proficient",
     "Playwright": "solid",
     "JavaScript": "basic",
-    "Network protocols": "proficient",
-    "Packet analysis": "solid",
+    "Wireshark": "proficient",
+    "Networking": "solid",
+    "GitLab CI/CD": "solid",
     "Linux": "solid",
-    "Git": "solid",
-    "Jenkins": "solid",
-    "Docker": "basic",
 }
 
 
@@ -53,13 +48,13 @@ class TestSkillsSection:
         portfolio_local_ready.scroll_to_section("skills")
         portfolio_local_ready.skills.expect_terminal_visible()
 
-    def test_ten_skill_rows_present(self, portfolio_local_ready: PortfolioPage) -> None:
-        """There must be exactly 10 skill rows — 4 + 3 + 3."""
+    def test_eight_skill_rows_present(self, portfolio_local_ready: PortfolioPage) -> None:
+        """There must be exactly 8 skill rows — 4 + 4."""
         portfolio_local_ready.scroll_to_section("skills")
-        portfolio_local_ready.skills.expect_skill_row_count(10)
+        portfolio_local_ready.skills.expect_skill_row_count(8)
 
-    def test_three_category_headings(self, portfolio_local_ready: PortfolioPage) -> None:
-        """Skills must be grouped under exactly 3 category headings."""
+    def test_two_category_headings(self, portfolio_local_ready: PortfolioPage) -> None:
+        """Skills must be grouped under exactly 2 category headings."""
         portfolio_local_ready.scroll_to_section("skills")
         headings = portfolio_local_ready.skills.get_category_headings()
         assert headings == EXPECTED_CATEGORIES
@@ -100,9 +95,9 @@ class TestSkillsSection:
         expect(dots).to_have_count(3)
 
     def test_skills_command_line_text(self, portfolio_local_ready: PortfolioPage) -> None:
-        """Terminal must display the 'skills --list --verbose' command line."""
+        """Terminal must display the 'tree ~/skills' command line."""
         portfolio_local_ready.scroll_to_section("skills")
-        expect(portfolio_local_ready.skills.terminal).to_contain_text("skills --list --verbose")
+        expect(portfolio_local_ready.skills.terminal).to_contain_text("tree ~/skills")
 
     def test_skill_bars_contain_filled_blocks(self, portfolio_local_ready: PortfolioPage) -> None:
         """Every skill row bar must contain at least one filled '█' block character."""

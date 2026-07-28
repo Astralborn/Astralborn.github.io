@@ -51,12 +51,12 @@ class TestAboutSection:
         portfolio_local_ready.scroll_to_section("about")
         expect(portfolio_local_ready.about.code_content).to_contain_text("Engineer")
 
-    def test_code_window_contains_self_diagnosis_method(
+    def test_code_window_contains_dunder_str_method(
         self, portfolio_local_ready: PortfolioPage
     ) -> None:
-        """Code content must include the 'self_diagnosis' static method."""
+        """Code content must include the '__str__' method."""
         portfolio_local_ready.scroll_to_section("about")
-        expect(portfolio_local_ready.about.code_content).to_contain_text("self_diagnosis")
+        expect(portfolio_local_ready.about.code_content).to_contain_text("__str__")
 
     def test_code_window_contains_allergic_to_repetition(
         self, portfolio_local_ready: PortfolioPage
@@ -88,9 +88,9 @@ class TestAboutSection:
         expect(dots).to_have_count(3)
 
     def test_stat_label_years_experience(self, portfolio_local_ready: PortfolioPage) -> None:
-        """'Years Experience' stat item must display the '3+' value."""
+        """'Years Experience' stat item must display the '4+' value."""
         portfolio_local_ready.scroll_to_section("about")
-        portfolio_local_ready.about.expect_stat_value("Years Experience", "3+")
+        portfolio_local_ready.about.expect_stat_value("Years Experience", "4+")
 
     def test_stat_label_primary_weapon(self, portfolio_local_ready: PortfolioPage) -> None:
         """'Primary Weapon' stat item must be visible."""
