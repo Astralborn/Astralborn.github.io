@@ -1,0 +1,17 @@
+[project]
+name = "astralborn-portfolio-tests"
+version = "0.1.0"
+description = "Playwright tests for astralborn.github.io"
+requires-python = ">=3.12"
+
+[dependency-groups]
+test = [
+    "playwright>=1.44",
+    "pytest>=8.0",
+    "pytest-playwright>=0.5",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
