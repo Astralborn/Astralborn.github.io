@@ -27,7 +27,7 @@ SKILL_PROFICIENCY: dict[str, str] = {
     "Python": "proficient",
     "Pytest": "proficient",
     "Playwright": "solid",
-    "JavaScript": "basic",
+    "Bash": "basic",
     "Wireshark": "proficient",
     "Networking": "solid",
     "GitLab CI/CD": "solid",
