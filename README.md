@@ -19,7 +19,7 @@
 
 ## About
 
-Personal portfolio site for a Test Automation Engineer — built with vanilla HTML, CSS, and JavaScript. No frameworks, no bundler, no npm. Terminal/hacker aesthetic throughout.
+Personal portfolio site for a QA Automation Engineer — built with vanilla HTML, CSS, and JavaScript. No frameworks, no bundler, no npm. Terminal/hacker aesthetic throughout.
 
 ## Features
 

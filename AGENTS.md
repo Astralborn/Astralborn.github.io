@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Personal portfolio website for a Test Automation Engineer. Static site with a terminal/hacker-inspired UI, hosted on GitHub Pages at https://astralborn.github.io.
+Personal portfolio website for a QA Automation Engineer. Static site with a terminal/hacker-inspired UI, hosted on GitHub Pages at https://astralborn.github.io.
 
 ## Tech Stack
 

@@ -10,8 +10,8 @@ class TestHeroSection:
     def test_tag_says_test_automation_engineer(
         self, portfolio_local_ready: PortfolioPage
     ) -> None:
-        """Tag line must identify the role as 'test automation engineer'."""
-        portfolio_local_ready.hero.expect_tag_contains("test automation engineer")
+        """Tag line must identify the role as 'qa automation engineer'."""
+        portfolio_local_ready.hero.expect_tag_contains("qa automation engineer")
 
     def test_subtitle_is_present(self, portfolio_local_ready: PortfolioPage) -> None:
         """Subtitle element must contain non-empty text."""
@@ -89,8 +89,8 @@ class TestHeroSection:
         expect(portfolio_local_ready.hero.section).to_be_visible()
 
     def test_hero_tag_text_exact(self, portfolio_local_ready: PortfolioPage) -> None:
-        """Tag line must match the exact copy '// test automation engineer'."""
-        expect(portfolio_local_ready.hero.tag).to_have_text("// test automation engineer")
+        """Tag line must match the exact copy '// QA automation engineer'."""
+        expect(portfolio_local_ready.hero.tag).to_have_text("// QA automation engineer")
 
     def test_terminal_output_mentions_python(self, portfolio_local_ready: PortfolioPage) -> None:
         """Terminal output must mention Python as part of the tech stack."""
