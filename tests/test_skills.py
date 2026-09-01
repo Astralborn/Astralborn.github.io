@@ -8,7 +8,7 @@ EXPECTED_SKILLS: list[str] = [
     "Python",
     "Pytest",
     "Playwright",
-    "JavaScript",
+    "Bash",
     "Wireshark",
     "Networking",
     "GitLab CI/CD",

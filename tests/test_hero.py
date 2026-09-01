@@ -11,7 +11,7 @@ class TestHeroSection:
         self, portfolio_local_ready: PortfolioPage
     ) -> None:
         """Tag line must identify the role as 'qa automation engineer'."""
-        portfolio_local_ready.hero.expect_tag_contains("qa automation engineer")
+        portfolio_local_ready.hero.expect_tag_contains("QA automation engineer")
 
     def test_subtitle_is_present(self, portfolio_local_ready: PortfolioPage) -> None:
         """Subtitle element must contain non-empty text."""
