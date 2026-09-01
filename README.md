@@ -2,13 +2,10 @@
 
 **Terminal-inspired portfolio.** Cyberpunk. Zero dependencies.
 
-![CI](https://github.com/astralborn/astralborn.github.io/actions/workflows/tests.yml/badge.svg)
-![License](https://img.shields.io/github/license/astralborn/astralborn.github.io?style=for-the-badge)
+[![CI](https://github.com/astralborn/astralborn.github.io/actions/workflows/tests.yml/badge.svg)](https://github.com/astralborn/astralborn.github.io/actions/workflows/tests.yml)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)
 
-
-<a href="https://astralborn.github.io">
-  <img src="https://img.shields.io/badge/Live_Site-00FF8C?style=for-the-badge&logoColor=black" alt="Live site" />
-</a>
+[![Live Site](https://img.shields.io/badge/Live_Site-00FF8C?style=for-the-badge&logoColor=black)](https://astralborn.github.io)
 </div>
 
 ---
