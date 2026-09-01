@@ -2,12 +2,8 @@
 
 **Terminal-inspired portfolio.** Cyberpunk. Zero dependencies.
 
-![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-FFD700?style=flat-square&logo=javascript&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white)
-![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white)
+![CI](https://github.com/astralborn/astralborn.github.io/actions/workflows/tests.yml/badge.svg)
+![License](https://img.shields.io/github/license/astralborn/astralborn.github.io?style=for-the-badge)
 
 
 <a href="https://astralborn.github.io">
